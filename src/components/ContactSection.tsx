@@ -92,12 +92,23 @@ export default function ContactSection() {
     e.preventDefault();
     setStatus('sending');
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch('https://formsubmit.co/ajax/vanyx.ia@gmail.com', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          Nombre: form.name,
+          Email: form.email,
+          Empresa: form.company || 'No especificada',
+          Servicio: form.service || 'No especificado',
+          Mensaje: form.message,
+          _subject: `🔥 Nuevo Contacto de ${form.name} — VANYX`
+        }),
       });
-      if (res.ok) {
+      const data = await res.json();
+      if (res.ok && data.success === 'true') {
         setStatus('ok');
         setForm({ name: '', email: '', company: '', service: '', message: '' });
       } else {
