@@ -91,9 +91,22 @@ export default function ContactSection() {
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('sending');
-    await new Promise((r) => setTimeout(r, 1800));
-    setStatus('ok');
-    setForm({ name: '', email: '', company: '', service: '', message: '' });
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        setStatus('ok');
+        setForm({ name: '', email: '', company: '', service: '', message: '' });
+      } else {
+        setStatus('err');
+      }
+    } catch (err) {
+      console.error('Error al enviar formulario:', err);
+      setStatus('err');
+    }
     setTimeout(() => setStatus('idle'), 4000);
   };
 
