@@ -69,11 +69,11 @@
   --in-out:    cubic-bezier(0.45, 0, 0.55, 1);
 
   /* ── Duration ── */
-  --d-fast:    120ms;
-  --d-base:    200ms;
-  --d-slow:    350ms;
-  --d-slower:  550ms;
-  --d-glacial: 900ms;
+  --d-fast:    100ms;
+  --d-base:    180ms;
+  --d-slow:    320ms;
+  --d-slower:  500ms;
+  --d-glacial: 850ms;
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -221,9 +221,9 @@ h1, h2, h3, h4, h5, h6 {
 
   /* Cyan-tinted glass */
   .glass-cyan {
-    background: rgba(0,217,255,0.03);
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background: rgba(0,217,255,0.045);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
     border: 1px solid var(--bc-1);
   }
 
@@ -336,11 +336,11 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .btn-primary:active {
-    transform: translateY(0px) scale(0.99);
+    transform: translateY(0px) scale(0.98);
     box-shadow:
       inset 0 1px 0 rgba(255,255,255,0.20),
       var(--e-1),
-      0 0 20px rgba(0,217,255,0.20);
+      0 0 12px rgba(0,217,255,0.15);
   }
 
   /* ── GHOST BUTTON ── */
@@ -407,9 +407,9 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .input-premium:focus {
-    border-color: rgba(0,217,255,0.35);
-    background: rgba(0,217,255,0.025);
-    box-shadow: 0 0 0 3px rgba(0,217,255,0.07), inset 0 1px 0 rgba(0,217,255,0.05);
+    border-color: rgba(0,217,255,0.38);
+    background: rgba(0,217,255,0.03);
+    box-shadow: 0 0 0 1px rgba(0,217,255,0.38), 0 0 0 4px rgba(0,217,255,0.08), inset 0 1px 0 rgba(0,217,255,0.05);
   }
 
   /* ── DIVIDERS ── */

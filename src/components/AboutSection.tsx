@@ -242,6 +242,7 @@ export default function AboutSection() {
               style={{
                 background: 'rgba(0,217,255,0.025)',
                 border:     '1px solid rgba(0,217,255,0.12)',
+                boxShadow:  'inset 0 1px 0 rgba(0,217,255,0.06), 0 4px 24px rgba(0,0,0,0.25)',
               }}
             >
               {/* Top beam */}
@@ -293,20 +294,24 @@ export default function AboutSection() {
                 transition={{ duration: 0.5, delay: i * 0.09, ease: [0.16, 1, 0.3, 1] }}
                 whileHover={{ y: -4, transition: { duration: 0.3, ease: [0.16, 1, 0.3, 1] } }}
                 className="card p-7 group"
+                style={{ cursor: 'default' }}
               >
                 <div
-                  className="mb-5 group-hover:[color:rgba(0,217,255,0.7)] transition-colors duration-300"
-                  style={{ color: '#3D3D48' }}
+                  className="mb-5 group-hover:text-[var(--cyan)] transition-colors duration-300"
+                  style={{ color: '#5A5A68', transition: 'color var(--d-base)' }}
                 >
                   {v.icon}
                 </div>
                 <h4
-                  className="mb-2 group-hover:[color:#F5F5F5] transition-colors duration-300"
-                  style={{ fontSize: '13.5px', fontWeight: 600, letterSpacing: '-0.01em', color: '#7A7A8A' }}
+                  className="mb-2 group-hover:text-[#F5F5F5] transition-colors duration-300"
+                  style={{ fontSize: '13.5px', fontWeight: 600, letterSpacing: '-0.01em', color: '#9B9BA6', transition: 'color var(--d-base)' }}
                 >
                   {v.title}
                 </h4>
-                <p style={{ fontSize: '12.5px', lineHeight: '1.65', color: '#3D3D48' }}>
+                <p
+                  className="group-hover:text-[#F5F5F5] transition-colors duration-300"
+                  style={{ fontSize: '12.5px', lineHeight: '1.65', color: '#5A5A68', transition: 'color var(--d-base)' }}
+                >
                   {v.body}
                 </p>
               </motion.div>
@@ -338,7 +343,7 @@ export default function AboutSection() {
             aria-hidden
             className="absolute inset-0 pointer-events-none"
             style={{
-              background: 'radial-gradient(ellipse 60% 60% at 50% 0%, rgba(0,217,255,0.05) 0%, transparent 65%)',
+              background: 'radial-gradient(ellipse 70% 70% at 50% 0%, rgba(0,217,255,0.05) 0%, transparent 65%)',
             }}
           />
 

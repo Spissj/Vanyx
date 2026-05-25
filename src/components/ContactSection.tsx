@@ -169,10 +169,10 @@ export default function ContactSection() {
                 {m.icon}
               </div>
               <div className="min-w-0">
-                <div style={{ fontSize: '10.5px', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#3D3D48', marginBottom: '2px' }}>
+                <div style={{ fontSize: '10.5px', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#5A5A68', marginBottom: '2px' }}>
                   {m.label}
                 </div>
-                <div style={{ fontSize: '13.5px', color: '#7A7A8A', fontWeight: 500, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                <div style={{ fontSize: '13.5px', color: '#9B9BA6', fontWeight: 500, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                   {m.value}
                 </div>
               </div>
@@ -345,8 +345,8 @@ export default function ContactSection() {
                       </svg>
                     </div>
                     <div>
-                      <div style={{ fontSize: '13px', fontWeight: 600, color: '#7A7A8A', marginBottom: '2px', letterSpacing: '-0.01em' }}>{r.title}</div>
-                      <div style={{ fontSize: '12px', color: '#3D3D48', lineHeight: '1.6' }}>{r.body}</div>
+                      <div style={{ fontSize: '13px', fontWeight: 600, color: '#9B9BA6', marginBottom: '2px', letterSpacing: '-0.01em' }}>{r.title}</div>
+                      <div style={{ fontSize: '12px', color: '#5A5A68', lineHeight: '1.6' }}>{r.body}</div>
                     </div>
                   </motion.div>
                 ))}
@@ -397,7 +397,7 @@ export default function ContactSection() {
               >
                 Respuesta inmediata
               </h3>
-              <p className="relative mb-5" style={{ fontSize: '13px', color: '#5A5A68', lineHeight: '1.55' }}>
+              <p className="relative mb-5" style={{ fontSize: '13px', color: '#9B9BA6', lineHeight: '1.55' }}>
                 Chatea con nosotros por WhatsApp
               </p>
               <span

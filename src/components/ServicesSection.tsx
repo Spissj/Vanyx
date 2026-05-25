@@ -123,25 +123,24 @@ function ServiceCard({ svc }: { svc: typeof SERVICES[0] }) {
       className="group relative bg-[#020202] p-8"
       style={{ cursor: 'default' }}
     >
-      {/* Top accent line — slides in on hover */}
+      {/* Top accent line — brightens on hover */}
       <div
-        className="absolute top-0 left-6 right-6 h-[1px] opacity-0 group-hover:opacity-100"
+        className="absolute top-0 left-6 right-6 h-[1px] opacity-15 group-hover:opacity-100"
         style={{
           background: 'linear-gradient(90deg, transparent, rgba(0,217,255,0.55), transparent)',
-          transition: 'opacity 0.4s ease',
+          transition: 'opacity var(--d-base) var(--smooth)',
         }}
       />
 
       {/* Number */}
       <div
-        className="mb-5"
+        className="mb-5 text-[#4B4B57] group-hover:text-[var(--cyan)]"
         style={{
           fontFamily:    'ui-monospace, monospace',
           fontSize:      '10px',
           fontWeight:    600,
           letterSpacing: '0.15em',
-          color:         '#2E2E38',
-          transition:    'color 0.3s ease',
+          transition:    'color var(--d-base) var(--smooth)',
         }}
       >
         {svc.id}
@@ -149,13 +148,12 @@ function ServiceCard({ svc }: { svc: typeof SERVICES[0] }) {
 
       {/* Icon */}
       <div
-        className="mb-5"
+        className="mb-5 text-[#5A5A68] group-hover:text-[var(--cyan)]"
         style={{
-          color:      '#3D3D48',
-          transition: 'color 0.3s ease',
+          transition: 'color var(--d-base) var(--smooth), transform var(--d-base) var(--smooth)',
         }}
       >
-        <div className="group-hover:[color:rgba(0,217,255,0.75)] transition-colors duration-300">
+        <div className="group-hover:scale-105 transition-transform duration-300 flex-shrink-0">
           {svc.icon}
         </div>
       </div>
@@ -167,7 +165,7 @@ function ServiceCard({ svc }: { svc: typeof SERVICES[0] }) {
           fontSize:      '14.5px',
           fontWeight:    600,
           letterSpacing: '-0.01em',
-          transition:    'color 0.3s ease',
+          transition:    'color var(--d-base) var(--smooth)',
         }}
       >
         {svc.title}
@@ -175,11 +173,11 @@ function ServiceCard({ svc }: { svc: typeof SERVICES[0] }) {
 
       {/* Description */}
       <p
-        className="text-[#2E2E38] group-hover:text-[#4B4B57]"
+        className="text-[#5A5A68] group-hover:text-[#9B9BA6]"
         style={{
           fontSize:   '13px',
           lineHeight: '1.65',
-          transition: 'color 0.35s ease',
+          transition: 'color var(--d-base) var(--smooth)',
         }}
       >
         {svc.description}

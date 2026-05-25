@@ -77,11 +77,11 @@ export default function Navigation() {
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
       className="fixed top-0 left-0 right-0 z-50"
       style={{
-        background: scrolled ? 'rgba(2,2,2,0.80)' : 'transparent',
+        background: scrolled ? 'rgba(2,2,2,0.82)' : 'transparent',
         backdropFilter: scrolled ? 'blur(20px) saturate(180%)' : 'none',
         WebkitBackdropFilter: scrolled ? 'blur(20px) saturate(180%)' : 'none',
-        borderBottom: scrolled ? '1px solid rgba(255,255,255,0.06)' : '1px solid transparent',
-        transition: 'background 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease',
+        borderBottom: scrolled ? '1px solid rgba(255,255,255,0.09)' : '1px solid transparent',
+        transition: 'background 0.3s ease, backdrop-filter 0.3s ease, border-color 0.3s ease',
       }}
     >
       <div className="mx-auto max-w-7xl px-6 h-[60px] flex items-center justify-between">

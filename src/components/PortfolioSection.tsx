@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 
 /* ── Project data ──────────────────────────────────────────── */
 const PROJECTS = [
@@ -183,8 +183,8 @@ function ProjectCard({ p }: { p: typeof PROJECTS[0] }) {
           style={{
             fontSize:   '13px',
             lineHeight: '1.65',
-            color:      hovered ? '#4B4B57' : '#2E2E38',
-            transition: 'color 0.35s ease',
+            color:      hovered ? '#9B9BA6' : '#5A5A68',
+            transition: 'color var(--d-base) var(--smooth)',
           }}
         >
           {p.description}
@@ -203,9 +203,10 @@ function ProjectCard({ p }: { p: typeof PROJECTS[0] }) {
                 borderRadius: '4px',
                 fontSize:     '11px',
                 fontWeight:    500,
-                background:   'rgba(255,255,255,0.04)',
-                color:        '#4B4B57',
-                border:       '1px solid rgba(255,255,255,0.06)',
+                background:   hovered ? 'rgba(255,255,255,0.05)' : 'rgba(255,255,255,0.03)',
+                color:        hovered ? '#9B9BA6' : '#5A5A68',
+                border:       hovered ? '1px solid rgba(255,255,255,0.09)' : '1px solid rgba(255,255,255,0.05)',
+                transition:   'color var(--d-base) var(--smooth), border-color var(--d-base) var(--smooth), background var(--d-base) var(--smooth)',
               }}
             >
               {t}
@@ -281,6 +282,7 @@ export default function PortfolioSection() {
                   background:    isActive ? '#00D9FF' : 'transparent',
                   color:         isActive ? '#020202' : '#4B4B57',
                   border:        isActive ? '1px solid transparent' : '1px solid rgba(255,255,255,0.09)',
+                  boxShadow:     isActive ? '0 0 12px rgba(0,217,255,0.25)' : 'none',
                   transition:   'all 0.2s ease',
                   cursor:       'pointer',
                   letterSpacing: '-0.005em',

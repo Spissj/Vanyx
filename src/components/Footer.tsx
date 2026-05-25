@@ -103,7 +103,7 @@ export default function Footer() {
               style={{
                 fontSize:   '13px',
                 lineHeight: '1.7',
-                color:      '#3D3D48',
+                color:      '#5A5A68',
                 maxWidth:   '210px',
                 marginBottom: '1.25rem',
               }}
@@ -116,7 +116,7 @@ export default function Footer() {
               style={{
                 fontFamily:    'ui-monospace, "SF Mono", monospace',
                 fontSize:      '11.5px',
-                color:         '#2E2E38',
+                color:         '#7A7A8A',
                 letterSpacing: '0.04em',
                 marginBottom:  '1.5rem',
               }}
@@ -136,16 +136,16 @@ export default function Footer() {
                   style={{
                     background:  'transparent',
                     border:      '1px solid rgba(255,255,255,0.07)',
-                    color:       '#3D3D48',
+                    color:       '#5A5A68',
                     transition:  'border-color 0.2s ease, color 0.2s ease',
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = 'rgba(0,217,255,0.20)';
-                    e.currentTarget.style.color       = '#7A7A8A';
+                    e.currentTarget.style.borderColor = 'rgba(0,217,255,0.25)';
+                    e.currentTarget.style.color       = '#00D9FF';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)';
-                    e.currentTarget.style.color       = '#3D3D48';
+                    e.currentTarget.style.color       = '#5A5A68';
                   }}
                 >
                   {s.icon}
@@ -163,7 +163,7 @@ export default function Footer() {
                   fontWeight:    700,
                   letterSpacing: '0.13em',
                   textTransform: 'uppercase',
-                  color:         '#2E2E38',
+                  color:         '#5A5A68',
                   marginBottom:  '1.25rem',
                 }}
               >
@@ -175,9 +175,9 @@ export default function Footer() {
                     <motion.a
                       href={link.href}
                       whileHover={{ x: 2, transition: { duration: 0.15 } }}
-                      style={{ fontSize: '13px', color: '#3D3D48', transition: 'color 0.2s ease', display: 'inline-block' }}
-                      onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#7A7A8A'; }}
-                      onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#3D3D48'; }}
+                      style={{ fontSize: '13px', color: '#5A5A68', transition: 'color 0.2s ease', display: 'inline-block' }}
+                      onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#F5F5F5'; }}
+                      onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#5A5A68'; }}
                     >
                       {link.label}
                     </motion.a>
@@ -233,7 +233,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div
           className="pb-8 flex flex-col sm:flex-row items-center justify-between gap-3"
-          style={{ fontSize: '12px', color: '#2E2E38' }}
+          style={{ fontSize: '12px', color: '#4B4B57' }}
         >
           <p>© {year} VANYX. Todos los derechos reservados.</p>
           <p>

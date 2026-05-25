@@ -5,9 +5,8 @@ import {
   useMotionValue,
   useSpring,
   useTransform,
-  AnimatePresence,
 } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 /* ═══════════════════════════════════════════════════════════
    MAGNETIC BUTTON — "Apple-style" organic hover
@@ -67,14 +66,6 @@ function MagneticButton({
 /* ═══════════════════════════════════════════════════════════
    WORD REVEAL — per-word spring entrance
    ═══════════════════════════════════════════════════════════ */
-const HEADLINE = [
-  { text: 'Automatizamos',   br: false, cyan: false },
-  { text: 'el',              br: false, cyan: false },
-  { text: ' ',               br: true,  cyan: false }, // break
-  { text: 'futuro',          br: false, cyan: true  },
-  { text: 'de',              br: false, cyan: false },
-  { text: 'tu negocio.',     br: false, cyan: false },
-];
 
 function HeadlineWord({
   text,
@@ -113,8 +104,6 @@ const METRICS = [
    HERO SECTION
    ═══════════════════════════════════════════════════════════ */
 export default function HeroSection() {
-  const [ready, setReady] = useState(false);
-
   /* Smooth mouse parallax for the ambient glow */
   const rawX    = useMotionValue(0.5);
   const rawY    = useMotionValue(0.5);
@@ -126,7 +115,6 @@ export default function HeroSection() {
   const orbY = useTransform(springY, [0, 1], [-18, 18]);
 
   useEffect(() => {
-    setReady(true);
     const onMove = (e: MouseEvent) => {
       rawX.set(e.clientX / window.innerWidth);
       rawY.set(e.clientY / window.innerHeight);
@@ -197,7 +185,7 @@ export default function HeroSection() {
             'radial-gradient(ellipse 75% 70% at 50% 38%, black 30%, transparent 100%)',
           WebkitMaskImage:
             'radial-gradient(ellipse 75% 70% at 50% 38%, black 30%, transparent 100%)',
-          opacity: 0.3,
+          opacity: 0.20,
         }}
       />
 
@@ -226,7 +214,7 @@ export default function HeroSection() {
         style={{
           height: '1px',
           background:
-            'linear-gradient(90deg, transparent 5%, rgba(0,217,255,0.18) 25%, rgba(0,217,255,0.35) 50%, rgba(0,217,255,0.18) 75%, transparent 95%)',
+            'linear-gradient(90deg, transparent 5%, rgba(0,217,255,0.22) 25%, rgba(0,217,255,0.45) 50%, rgba(0,217,255,0.22) 75%, transparent 95%)',
         }}
       />
 
@@ -274,7 +262,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 16, filter: 'blur(6px)' }}
           animate={{ opacity: 1,  y:  0,  filter: 'blur(0px)' }}
           transition={{ delay: 0.9, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-12 max-w-[520px]"
+          className="mb-12 max-w-[480px]"
           style={{
             fontSize: '1.125rem',
             lineHeight: '1.7',
@@ -337,7 +325,7 @@ export default function HeroSection() {
                 <div
                   style={{
                     fontFamily: "'Sora', system-ui, sans-serif",
-                    fontSize:    '1.875rem',
+                    fontSize:    '2rem',
                     fontWeight:  700,
                     letterSpacing: '-0.04em',
                     lineHeight:  1,
