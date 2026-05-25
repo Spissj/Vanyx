@@ -121,7 +121,7 @@ export default function Footer() {
                 marginBottom:  '1.5rem',
               }}
             >
-              hola@vanyx.com
+              vanyx.ia@gmail.com
             </p>
 
             {/* Social */}

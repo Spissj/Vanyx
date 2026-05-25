@@ -10,8 +10,8 @@ type Status = 'idle' | 'sending' | 'ok' | 'err';
 const METHODS = [
   {
     label: 'Email',
-    value: 'hola@vanyx.com',
-    href:  'mailto:hola@vanyx.com',
+    value: 'vanyx.ia@gmail.com',
+    href:  'mailto:vanyx.ia@gmail.com',
     icon: (
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
         <rect x="2" y="3.5" width="14" height="11" rx="1.5" stroke="currentColor" strokeWidth="1.35"/>
@@ -21,8 +21,8 @@ const METHODS = [
   },
   {
     label: 'WhatsApp',
-    value: '+56 9 1234 5678',
-    href:  'https://wa.me/56912345678',
+    value: '+56 9 7398 8413',
+    href:  'https://wa.me/56973988413',
     icon: (
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
         <circle cx="9" cy="9" r="7.25" stroke="currentColor" strokeWidth="1.35"/>
@@ -355,7 +355,7 @@ export default function ContactSection() {
 
             {/* WhatsApp */}
             <motion.a
-              href="https://wa.me/56912345678"
+              href="https://wa.me/56973988413"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ y: -3, transition: { duration: 0.25, ease: [0.16, 1, 0.3, 1] } }}
